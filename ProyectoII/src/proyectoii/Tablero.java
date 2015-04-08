@@ -464,6 +464,122 @@ public class Tablero extends JFrame implements ActionListener
 
                 }
             }
+            
+            if ((pfila > 0)&&(pfila < (filas-1))&&((pcolumna-1) >= 0))
+            {
+                if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila-1][pcolumna-1].getColor()))
+                {
+                    joyas[pfila-1][pcolumna-1].setBackground(Color.RED);
+                    joyas[pfila][pcolumna-1].setBackground(Color.BLUE);
+                    joyas[pfila][pcolumna].setBackground(Color.RED);
+                    joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                    JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                    Jewel joyaIncorrecta = joyas[pfila][pcolumna-1].getJewel();
+                    Jewel joyaCorrecta = joyas[pfila-1][pcolumna-1].getJewel();
+                    joyas[pfila][pcolumna-1].clearJewel();
+                    joyas[pfila-1][pcolumna-1].clearJewel();
+                    joyas[pfila][pcolumna-1].setJewel(joyaCorrecta);
+                    joyas[pfila-1][pcolumna-1].setJewel(joyaIncorrecta);
+
+                    joyas[pfila-1][pcolumna-1].setBackground(Color.BLUE);
+                    joyas[pfila][pcolumna-1].setBackground(Color.RED);
+                    joyas[pfila][pcolumna].setBackground(Color.RED);
+                    joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                    JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                    return true;
+
+                }
+                if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna-1].getColor()))
+                {
+                    joyas[pfila+1][pcolumna-1].setBackground(Color.RED);
+                    joyas[pfila][pcolumna-1].setBackground(Color.BLUE);
+                    joyas[pfila][pcolumna].setBackground(Color.RED);
+                    joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                    JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                    Jewel joyaIncorrecta = joyas[pfila][pcolumna-1].getJewel();
+                    Jewel joyaCorrecta = joyas[pfila+1][pcolumna-1].getJewel();
+                    joyas[pfila][pcolumna-1].clearJewel();
+                    joyas[pfila+1][pcolumna-1].clearJewel();
+                    joyas[pfila][pcolumna-1].setJewel(joyaCorrecta);
+                    joyas[pfila+1][pcolumna-1].setJewel(joyaIncorrecta);
+
+                    joyas[pfila+1][pcolumna-1].setBackground(Color.BLUE);
+                    joyas[pfila][pcolumna-1].setBackground(Color.RED);
+                    joyas[pfila][pcolumna].setBackground(Color.RED);
+                    joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                    JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                    return true;
+
+                }
+            }
+            else
+            {
+                if ((pfila == 0)&&((pcolumna-1) >= 0))
+                {
+                    if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna-1].getColor()))
+                    {
+                        joyas[pfila+1][pcolumna-1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna-1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila][pcolumna-1].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila+1][pcolumna-1].getJewel();
+                        joyas[pfila][pcolumna-1].clearJewel();
+                        joyas[pfila+1][pcolumna-1].clearJewel();
+                        joyas[pfila][pcolumna-1].setJewel(joyaCorrecta);
+                        joyas[pfila+1][pcolumna-1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila+1][pcolumna-1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna-1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                        return true;
+
+                    }
+                }
+                if ((pfila == (filas-1))&&((pcolumna-1) >= 0))
+                {
+                    if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila-1][pcolumna-1].getColor()))
+                    {
+                        joyas[pfila-1][pcolumna-1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna-1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila][pcolumna-1].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila-1][pcolumna-1].getJewel();
+                        joyas[pfila][pcolumna-1].clearJewel();
+                        joyas[pfila-1][pcolumna-1].clearJewel();
+                        joyas[pfila][pcolumna-1].setJewel(joyaCorrecta);
+                        joyas[pfila-1][pcolumna-1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila-1][pcolumna-1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna-1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+1].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                        return true;
+
+                    }
+                }
+            }
+            
         }
         else
         {
@@ -499,35 +615,64 @@ public class Tablero extends JFrame implements ActionListener
 
                     }
                 }
+                
+                if ((pfila > 0)&&(pfila < (filas-1)))
+                {
+                    if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila-1][pcolumna+1].getColor()))
+                    {
+                        joyas[pfila-1][pcolumna+1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna+2].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila][pcolumna+1].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila-1][pcolumna+1].getJewel();
+                        joyas[pfila][pcolumna+1].clearJewel();
+                        joyas[pfila-1][pcolumna+1].clearJewel();
+                        joyas[pfila][pcolumna+1].setJewel(joyaCorrecta);
+                        joyas[pfila-1][pcolumna+1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila-1][pcolumna+1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna+1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+2].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                        return true;
+
+                    }
+                    if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
+                    {
+                        joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna+2].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila][pcolumna+1].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila+1][pcolumna+1].getJewel();
+                        joyas[pfila][pcolumna+1].clearJewel();
+                        joyas[pfila+1][pcolumna+1].clearJewel();
+                        joyas[pfila][pcolumna+1].setJewel(joyaCorrecta);
+                        joyas[pfila+1][pcolumna+1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila+1][pcolumna+1].setBackground(Color.BLUE);
+                        joyas[pfila][pcolumna+1].setBackground(Color.RED);
+                        joyas[pfila][pcolumna+2].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                        return true;
+
+                    }
+                }
                 else
                 {
-                    if ((pfila > 0)&&(pfila < (filas-1)))
+                    if (pfila == 0)
                     {
-                        if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila-1][pcolumna+1].getColor()))
-                        {
-                            joyas[pfila-1][pcolumna+1].setBackground(Color.RED);
-                            joyas[pfila][pcolumna+1].setBackground(Color.BLUE);
-                            joyas[pfila][pcolumna+2].setBackground(Color.RED);
-                            joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                            JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
-
-                            Jewel joyaIncorrecta = joyas[pfila][pcolumna+1].getJewel();
-                            Jewel joyaCorrecta = joyas[pfila-1][pcolumna+1].getJewel();
-                            joyas[pfila][pcolumna+1].clearJewel();
-                            joyas[pfila-1][pcolumna+1].clearJewel();
-                            joyas[pfila][pcolumna+1].setJewel(joyaCorrecta);
-                            joyas[pfila-1][pcolumna+1].setJewel(joyaIncorrecta);
-
-                            joyas[pfila-1][pcolumna+1].setBackground(Color.BLUE);
-                            joyas[pfila][pcolumna+1].setBackground(Color.RED);
-                            joyas[pfila][pcolumna+2].setBackground(Color.RED);
-                            joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                            JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
-                            return true;
-
-                        }
                         if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
                         {
                             joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
@@ -554,63 +699,32 @@ public class Tablero extends JFrame implements ActionListener
 
                         }
                     }
-                    else
+                    if (pfila == (filas-1))
                     {
-                        if (pfila == 0)
+                        if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila-1][pcolumna+1].getColor()))
                         {
-                            if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
-                            {
-                                joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
-                                joyas[pfila][pcolumna+1].setBackground(Color.BLUE);
-                                joyas[pfila][pcolumna+2].setBackground(Color.RED);
-                                joyas[pfila][pcolumna].setBackground(Color.RED);
+                            joyas[pfila-1][pcolumna+1].setBackground(Color.RED);
+                            joyas[pfila][pcolumna+1].setBackground(Color.BLUE);
+                            joyas[pfila][pcolumna+2].setBackground(Color.RED);
+                            joyas[pfila][pcolumna].setBackground(Color.RED);
 
-                                JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+                            JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
 
-                                Jewel joyaIncorrecta = joyas[pfila][pcolumna+1].getJewel();
-                                Jewel joyaCorrecta = joyas[pfila+1][pcolumna+1].getJewel();
-                                joyas[pfila][pcolumna+1].clearJewel();
-                                joyas[pfila+1][pcolumna+1].clearJewel();
-                                joyas[pfila][pcolumna+1].setJewel(joyaCorrecta);
-                                joyas[pfila+1][pcolumna+1].setJewel(joyaIncorrecta);
+                            Jewel joyaIncorrecta = joyas[pfila][pcolumna+1].getJewel();
+                            Jewel joyaCorrecta = joyas[pfila-1][pcolumna+1].getJewel();
+                            joyas[pfila][pcolumna+1].clearJewel();
+                            joyas[pfila-1][pcolumna+1].clearJewel();
+                            joyas[pfila][pcolumna+1].setJewel(joyaCorrecta);
+                            joyas[pfila-1][pcolumna+1].setJewel(joyaIncorrecta);
 
-                                joyas[pfila+1][pcolumna+1].setBackground(Color.BLUE);
-                                joyas[pfila][pcolumna+1].setBackground(Color.RED);
-                                joyas[pfila][pcolumna+2].setBackground(Color.RED);
-                                joyas[pfila][pcolumna].setBackground(Color.RED);
+                            joyas[pfila-1][pcolumna+1].setBackground(Color.BLUE);
+                            joyas[pfila][pcolumna+1].setBackground(Color.RED);
+                            joyas[pfila][pcolumna+2].setBackground(Color.RED);
+                            joyas[pfila][pcolumna].setBackground(Color.RED);
 
-                                JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
-                                return true;
+                            JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                            return true;
 
-                            }
-                        }
-                        if (pfila == (filas-1))
-                        {
-                            if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila-1][pcolumna+1].getColor()))
-                            {
-                                joyas[pfila-1][pcolumna+1].setBackground(Color.RED);
-                                joyas[pfila][pcolumna+1].setBackground(Color.BLUE);
-                                joyas[pfila][pcolumna+2].setBackground(Color.RED);
-                                joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                                JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
-
-                                Jewel joyaIncorrecta = joyas[pfila][pcolumna+1].getJewel();
-                                Jewel joyaCorrecta = joyas[pfila-1][pcolumna+1].getJewel();
-                                joyas[pfila][pcolumna+1].clearJewel();
-                                joyas[pfila-1][pcolumna+1].clearJewel();
-                                joyas[pfila][pcolumna+1].setJewel(joyaCorrecta);
-                                joyas[pfila-1][pcolumna+1].setJewel(joyaIncorrecta);
-
-                                joyas[pfila-1][pcolumna+1].setBackground(Color.BLUE);
-                                joyas[pfila][pcolumna+1].setBackground(Color.RED);
-                                joyas[pfila][pcolumna+2].setBackground(Color.RED);
-                                joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                                JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
-                                return true;
-
-                            }
                         }
                     }
                 }
@@ -686,9 +800,90 @@ public class Tablero extends JFrame implements ActionListener
 
                     }
                 }
+                if ((pcolumna > 0)&&(pcolumna < (columnas-1)))
+                {
+                    if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna-1].getColor()))
+                    {
+                        joyas[pfila+1][pcolumna-1].setBackground(Color.RED);
+                        joyas[pfila+1][pcolumna].setBackground(Color.BLUE);
+                        joyas[pfila+2][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila+1][pcolumna].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila+1][pcolumna-1].getJewel();
+                        joyas[pfila+1][pcolumna].clearJewel();
+                        joyas[pfila+1][pcolumna-1].clearJewel();
+                        joyas[pfila+1][pcolumna].setJewel(joyaCorrecta);
+                        joyas[pfila+1][pcolumna-1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila+1][pcolumna-1].setBackground(Color.BLUE);
+                        joyas[pfila+1][pcolumna].setBackground(Color.RED);
+                        joyas[pfila+2][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                        return true;
+
+                    }
+                    if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
+                    {
+                        joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
+                        joyas[pfila+1][pcolumna].setBackground(Color.BLUE);
+                        joyas[pfila+2][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila+1][pcolumna].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila+1][pcolumna+1].getJewel();
+                        joyas[pfila+1][pcolumna].clearJewel();
+                        joyas[pfila+1][pcolumna+1].clearJewel();
+                        joyas[pfila+1][pcolumna].setJewel(joyaCorrecta);
+                        joyas[pfila+1][pcolumna+1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila+1][pcolumna+1].setBackground(Color.BLUE);
+                        joyas[pfila+1][pcolumna].setBackground(Color.RED);
+                        joyas[pfila+2][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                        return true;
+
+                    }
+                }
                 else
                 {
-                    if ((pcolumna > 0)&&(pcolumna < (columnas-1)))
+                    if (pcolumna == 0)
+                    {
+                        if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
+                        {
+                        joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
+                        joyas[pfila+1][pcolumna].setBackground(Color.BLUE);
+                        joyas[pfila+2][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
+
+                        Jewel joyaIncorrecta = joyas[pfila+1][pcolumna].getJewel();
+                        Jewel joyaCorrecta = joyas[pfila+1][pcolumna+1].getJewel();
+                        joyas[pfila+1][pcolumna].clearJewel();
+                        joyas[pfila+1][pcolumna+1].clearJewel();
+                        joyas[pfila+1][pcolumna].setJewel(joyaCorrecta);
+                        joyas[pfila+1][pcolumna+1].setJewel(joyaIncorrecta);
+
+                        joyas[pfila+1][pcolumna+1].setBackground(Color.BLUE);
+                        joyas[pfila+1][pcolumna].setBackground(Color.RED);
+                        joyas[pfila+2][pcolumna].setBackground(Color.RED);
+                        joyas[pfila][pcolumna].setBackground(Color.RED);
+
+                        JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
+                            return true;
+
+                        }
+                    }
+                    if (pcolumna == (columnas-1))
                     {
                         if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna-1].getColor()))
                         {
@@ -714,90 +909,6 @@ public class Tablero extends JFrame implements ActionListener
                             JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
                             return true;
 
-                        }
-                        if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
-                        {
-                            joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
-                            joyas[pfila+1][pcolumna].setBackground(Color.BLUE);
-                            joyas[pfila+2][pcolumna].setBackground(Color.RED);
-                            joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                            JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
-
-                            Jewel joyaIncorrecta = joyas[pfila+1][pcolumna].getJewel();
-                            Jewel joyaCorrecta = joyas[pfila+1][pcolumna+1].getJewel();
-                            joyas[pfila+1][pcolumna].clearJewel();
-                            joyas[pfila+1][pcolumna+1].clearJewel();
-                            joyas[pfila+1][pcolumna].setJewel(joyaCorrecta);
-                            joyas[pfila+1][pcolumna+1].setJewel(joyaIncorrecta);
-
-                            joyas[pfila+1][pcolumna+1].setBackground(Color.BLUE);
-                            joyas[pfila+1][pcolumna].setBackground(Color.RED);
-                            joyas[pfila+2][pcolumna].setBackground(Color.RED);
-                            joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                            JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
-                            return true;
-
-                        }
-                    }
-                    else
-                    {
-                        if (pcolumna == 0)
-                        {
-                            if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna+1].getColor()))
-                            {
-                            joyas[pfila+1][pcolumna+1].setBackground(Color.RED);
-                            joyas[pfila+1][pcolumna].setBackground(Color.BLUE);
-                            joyas[pfila+2][pcolumna].setBackground(Color.RED);
-                            joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                            JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
-
-                            Jewel joyaIncorrecta = joyas[pfila+1][pcolumna].getJewel();
-                            Jewel joyaCorrecta = joyas[pfila+1][pcolumna+1].getJewel();
-                            joyas[pfila+1][pcolumna].clearJewel();
-                            joyas[pfila+1][pcolumna+1].clearJewel();
-                            joyas[pfila+1][pcolumna].setJewel(joyaCorrecta);
-                            joyas[pfila+1][pcolumna+1].setJewel(joyaIncorrecta);
-
-                            joyas[pfila+1][pcolumna+1].setBackground(Color.BLUE);
-                            joyas[pfila+1][pcolumna].setBackground(Color.RED);
-                            joyas[pfila+2][pcolumna].setBackground(Color.RED);
-                            joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                            JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
-                                return true;
-
-                            }
-                        }
-                        if (pcolumna == (columnas-1))
-                        {
-                            if (joyas[pfila][pcolumna].getColor().equals(joyas[pfila+1][pcolumna-1].getColor()))
-                            {
-                                joyas[pfila+1][pcolumna-1].setBackground(Color.RED);
-                                joyas[pfila+1][pcolumna].setBackground(Color.BLUE);
-                                joyas[pfila+2][pcolumna].setBackground(Color.RED);
-                                joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                                JOptionPane.showMessageDialog(null,"Antes del Cambio: ");
-
-                                Jewel joyaIncorrecta = joyas[pfila+1][pcolumna].getJewel();
-                                Jewel joyaCorrecta = joyas[pfila+1][pcolumna-1].getJewel();
-                                joyas[pfila+1][pcolumna].clearJewel();
-                                joyas[pfila+1][pcolumna-1].clearJewel();
-                                joyas[pfila+1][pcolumna].setJewel(joyaCorrecta);
-                                joyas[pfila+1][pcolumna-1].setJewel(joyaIncorrecta);
-
-                                joyas[pfila+1][pcolumna-1].setBackground(Color.BLUE);
-                                joyas[pfila+1][pcolumna].setBackground(Color.RED);
-                                joyas[pfila+2][pcolumna].setBackground(Color.RED);
-                                joyas[pfila][pcolumna].setBackground(Color.RED);
-
-                                JOptionPane.showMessageDialog(null,"Despues del Cambio: ");
-                                return true;
-
-                            }
                         }
                     }
                 }
